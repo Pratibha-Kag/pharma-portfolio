@@ -1,28 +1,27 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import profileImage from "../../assets/profileImage.png";
+
 export const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center px-6 md:px-12 lg:px-20"
+      className="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-20 pt-24 md:pt-28"
     >
       <RevealOnScroll>
-        <div className="w-full max-w-10xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+        <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-20">
           {/* Left Content */}
           <div className="flex-1 text-center md:text-left">
-            <h1 className="text-2xl md:text-2xl lg:text-2xl font-bold mb-3 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-              <span>
-                {" "}
-                Hi, I'm React Developer with specialize in Pharmaceutical.
-              </span>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+              Hi, I'm a React Developer specializing in Pharmaceutical
+              Technology.
             </h1>
 
             <p className="text-gray-400 text-lg md:text-xl mb-8 max-w-xl">
               Pharmaceutical professional with hands-on experience in React
               development, focused on bridging pharmaceutical science and
               information technology. Aspiring to pursue M.Pharm IT and build
-              technology-driven solutions that support innovation across the
-              pharmaceutical and healthcare industry.
+              technology-driven solutions across the pharmaceutical and
+              healthcare industry.
             </p>
 
             <div className="flex justify-center md:justify-start gap-4">
@@ -44,10 +43,10 @@ export const Home = () => {
 
           {/* Right Image */}
           <div className="flex-1 flex justify-center">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500/50 shadow-[0_0_40px_rgba(59,130,246,0.3)]">
+            <div className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-blue-500/50 shadow-[0_0_40px_rgba(59,130,246,0.3)]">
               <img
                 src={profileImage}
-                alt="Pratibha Arya"
+                alt="Profile"
                 className="w-full h-full object-cover"
               />
             </div>
