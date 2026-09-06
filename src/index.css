@@ -1,0 +1,594 @@
+@import "tailwindcss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background: #030712;
+  color: #f3f4f6;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* =================================
+   PREMIUM ANIMATED BACKGROUND
+================================= */
+
+.animated-grid {
+  position: absolute;
+  inset: -100%;
+  background-image:
+    linear-gradient(rgba(59, 130, 246, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.07) 1px, transparent 1px);
+
+  background-size: 70px 70px;
+  transform: perspective(700px) rotateX(60deg);
+  transform-origin: center bottom;
+  animation: gridMove 10s linear infinite;
+  opacity: 0.7;
+}
+
+.background-glow {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.glow-one {
+  top: -150px;
+  left: -150px;
+  background: rgba(37, 99, 235, 0.28);
+  animation: glowMoveOne 8s ease-in-out infinite alternate;
+}
+
+.glow-two {
+  right: -150px;
+  bottom: -150px;
+  background: rgba(6, 182, 212, 0.22);
+  animation: glowMoveTwo 10s ease-in-out infinite alternate;
+}
+
+/* =================================
+   FLOATING PARTICLES
+================================= */
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #38bdf8;
+
+  box-shadow:
+    0 0 8px #38bdf8,
+    0 0 20px rgba(56, 189, 248, 0.7);
+
+  animation: particleFloat 5s ease-in-out infinite;
+}
+
+.particle-1 {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  top: 35%;
+  left: 75%;
+  animation-delay: 1s;
+}
+
+.particle-3 {
+  top: 70%;
+  left: 20%;
+  animation-delay: 2s;
+}
+
+.particle-4 {
+  top: 60%;
+  left: 85%;
+  animation-delay: 3s;
+}
+
+.particle-5 {
+  top: 80%;
+  left: 55%;
+  animation-delay: 1.5s;
+}
+
+.particle-6 {
+  top: 25%;
+  left: 90%;
+  animation-delay: 2.5s;
+}
+
+/* =================================
+   BACKGROUND ANIMATIONS
+================================= */
+
+@keyframes gridMove {
+  0% {
+    transform: perspective(700px) rotateX(60deg) translateY(0);
+  }
+
+  100% {
+    transform: perspective(700px) rotateX(60deg) translateY(70px);
+  }
+}
+
+@keyframes glowMoveOne {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(300px, 180px) scale(1.3);
+  }
+
+  100% {
+    transform: translate(150px, 400px) scale(0.8);
+  }
+}
+
+@keyframes glowMoveTwo {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-250px, -200px) scale(1.25);
+  }
+
+  100% {
+    transform: translate(-100px, -400px) scale(0.85);
+  }
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0) scale(0.6);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: translateY(-80px) scale(1.4);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-160px) scale(0.3);
+    opacity: 0;
+  }
+}
+
+/* =================================
+   REVEAL ANIMATION
+================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional button/card glow */
+.element-glow {
+  box-shadow:
+    0 0 20px rgba(59, 130, 246, 0.25),
+    0 0 60px rgba(6, 182, 212, 0.12);
+}
+/* =========================================
+   ULTRA PREMIUM ANIMATED BACKGROUND
+========================================= */
+
+.animated-grid {
+  position: absolute;
+  inset: -100%;
+  background-image:
+    linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px);
+
+  background-size: 65px 65px;
+
+  transform: perspective(800px) rotateX(60deg) scale(1.5);
+
+  transform-origin: center bottom;
+
+  animation: gridMove 7s linear infinite;
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 25%,
+    black 75%,
+    transparent
+  );
+
+  opacity: 0.8;
+}
+
+/* =========================================
+   BIG MOVING GLOWING ORBS
+========================================= */
+
+.background-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  opacity: 0.7;
+}
+
+/* BLUE ORB */
+
+.glow-one {
+  top: -180px;
+  left: -150px;
+
+  background: rgba(37, 99, 235, 0.55);
+
+  animation: glowOne 7s ease-in-out infinite alternate;
+}
+
+/* CYAN ORB */
+
+.glow-two {
+  right: -200px;
+  top: 20%;
+
+  background: rgba(6, 182, 212, 0.45);
+
+  animation: glowTwo 9s ease-in-out infinite alternate;
+}
+
+/* PURPLE / BLUE ORB */
+
+.glow-three {
+  left: 35%;
+  bottom: -250px;
+
+  width: 600px;
+  height: 600px;
+
+  background: rgba(79, 70, 229, 0.35);
+
+  animation: glowThree 11s ease-in-out infinite alternate;
+}
+
+/* =========================================
+   ROTATING GLOW RINGS
+========================================= */
+
+.orb-ring {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(56, 189, 248, 0.18);
+
+  box-shadow:
+    0 0 30px rgba(56, 189, 248, 0.08),
+    inset 0 0 30px rgba(59, 130, 246, 0.06);
+}
+
+/* BIG RING */
+
+.ring-one {
+  width: 650px;
+  height: 650px;
+
+  top: 10%;
+  right: -250px;
+
+  animation: rotateRing 20s linear infinite;
+}
+
+/* SECOND RING */
+
+.ring-two {
+  width: 400px;
+  height: 400px;
+
+  bottom: 5%;
+  left: -180px;
+
+  border-color: rgba(37, 99, 235, 0.2);
+
+  animation: rotateRingReverse 16s linear infinite;
+}
+
+/* =========================================
+   LIGHT BEAMS
+========================================= */
+
+.light-beam {
+  position: absolute;
+
+  width: 2px;
+  height: 450px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(56, 189, 248, 0.7),
+    transparent
+  );
+
+  filter: blur(1px);
+
+  opacity: 0.5;
+}
+
+/* BEAM 1 */
+
+.beam-one {
+  left: 25%;
+  top: -150px;
+
+  transform: rotate(35deg);
+
+  animation: beamMoveOne 6s ease-in-out infinite;
+}
+
+/* BEAM 2 */
+
+.beam-two {
+  right: 25%;
+  bottom: -150px;
+
+  transform: rotate(-35deg);
+
+  animation: beamMoveTwo 8s ease-in-out infinite;
+}
+
+/* =========================================
+   PARTICLES
+========================================= */
+
+.particle {
+  position: absolute;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #38bdf8;
+
+  box-shadow:
+    0 0 8px #38bdf8,
+    0 0 18px #38bdf8,
+    0 0 35px rgba(56, 189, 248, 0.8);
+
+  animation: particleMove 5s ease-in-out infinite;
+}
+
+/* PARTICLE POSITIONS */
+
+.particle-1 {
+  top: 15%;
+  left: 12%;
+}
+
+.particle-2 {
+  top: 30%;
+  left: 70%;
+  animation-delay: 1s;
+}
+
+.particle-3 {
+  top: 65%;
+  left: 18%;
+  animation-delay: 2s;
+}
+
+.particle-4 {
+  top: 75%;
+  left: 80%;
+  animation-delay: 3s;
+}
+
+.particle-5 {
+  top: 45%;
+  left: 50%;
+  animation-delay: 1.5s;
+}
+
+.particle-6 {
+  top: 20%;
+  left: 90%;
+  animation-delay: 2.5s;
+}
+
+.particle-7 {
+  top: 85%;
+  left: 40%;
+  animation-delay: 4s;
+}
+
+.particle-8 {
+  top: 55%;
+  left: 8%;
+  animation-delay: 2s;
+}
+
+.particle-9 {
+  top: 40%;
+  left: 35%;
+  animation-delay: 3.5s;
+}
+
+.particle-10 {
+  top: 12%;
+  left: 55%;
+  animation-delay: 4.5s;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+/* GRID */
+
+@keyframes gridMove {
+  0% {
+    transform: perspective(800px) rotateX(60deg) scale(1.5) translateY(0);
+  }
+
+  100% {
+    transform: perspective(800px) rotateX(60deg) scale(1.5) translateY(65px);
+  }
+}
+
+/* GLOW 1 */
+
+@keyframes glowOne {
+  0% {
+    transform: translate(0, 0) scale(0.8);
+  }
+
+  50% {
+    transform: translate(350px, 200px) scale(1.4);
+  }
+
+  100% {
+    transform: translate(150px, 500px) scale(0.9);
+  }
+}
+
+/* GLOW 2 */
+
+@keyframes glowTwo {
+  0% {
+    transform: translate(0, 0) scale(0.8);
+  }
+
+  50% {
+    transform: translate(-300px, 150px) scale(1.3);
+  }
+
+  100% {
+    transform: translate(-200px, -350px) scale(0.9);
+  }
+}
+
+/* GLOW 3 */
+
+@keyframes glowThree {
+  0% {
+    transform: translateX(-300px) scale(0.8);
+  }
+
+  50% {
+    transform: translateX(300px) scale(1.3);
+  }
+
+  100% {
+    transform: translateX(-100px) scale(0.9);
+  }
+}
+
+/* RINGS */
+
+@keyframes rotateRing {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateRingReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* BEAM 1 */
+
+@keyframes beamMoveOne {
+  0% {
+    transform: translate(-300px, -100px) rotate(35deg);
+
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translate(500px, 500px) rotate(35deg);
+
+    opacity: 0;
+  }
+}
+
+/* BEAM 2 */
+
+@keyframes beamMoveTwo {
+  0% {
+    transform: translate(300px, 100px) rotate(-35deg);
+
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translate(-500px, -500px) rotate(-35deg);
+
+    opacity: 0;
+  }
+}
+
+/* PARTICLES */
+
+@keyframes particleMove {
+  0% {
+    transform: translate(0, 0) scale(0.4);
+
+    opacity: 0.1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(30px, -100px) scale(1.5);
+
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-20px, -200px) scale(0.2);
+
+    opacity: 0;
+  }
+}
