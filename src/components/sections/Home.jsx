@@ -1,5 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-import profileImage from "../../assets/profileImage.png";
+import ProfileImage1 from "../../assets/ProfileImage1.png";
 
 export const Home = () => {
   return (
@@ -47,7 +47,7 @@ export const Home = () => {
               {/* Profile Image */}
               <div className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-blue-500/50 shadow-[0_0_40px_rgba(59,130,246,0.3)]">
                 <img
-                  src={profileImage}
+                  src={ProfileImage1}
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
@@ -56,7 +56,7 @@ export const Home = () => {
               {/* Floating Badge */}
               <div className="absolute bottom-0 right-0 translate-y-1/2 translate-x-1/4 glass rounded-xl px-4 py-3 animate-float">
                 <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                  <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse" />
 
                   <span className="text-sm font-medium whitespace-nowrap">
                     I'm Open to work
